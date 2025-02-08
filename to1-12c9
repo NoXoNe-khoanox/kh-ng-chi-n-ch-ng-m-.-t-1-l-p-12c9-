@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuộc Kháng Chiến Chống Mỹ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #bb0a1e;
+            color: white;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background: #333;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline;
+            padding: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background: #575757;
+        }
+        main {
+            padding: 20px;
+            text-align: left;
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #bb0a1e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cuộc Kháng Chiến Chống Mỹ</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showContent('mo-dau')">Mở đầu</a></li>
+            <li><a href="#" onclick="showContent('dien-bien')">Diễn biến</a></li>
+            <li><a href="#" onclick="showContent('nguyen-nhan')">Nguyên nhân</a></li>
+            <li><a href="#" onclick="showContent('ket-qua')">Kết quả</a></li>
+            <li><a href="#" onclick="showContent('y-nghia')">Ý nghĩa</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+        <h2>Mở đầu</h2>
+        <p>Sau Hiệp định Genève năm 1954, Việt Nam bị chia cắt thành hai miền. Miền Bắc được giải phóng, tiến hành xây dựng chủ nghĩa xã hội, còn miền Nam nằm dưới sự kiểm soát của chính quyền Ngô Đình Diệm do Mỹ hậu thuẫn. Mỹ can thiệp sâu vào miền Nam, ngăn cản tổng tuyển cử thống nhất đất nước, đàn áp phong trào cách mạng, khiến nhân dân miền Nam phải đứng lên đấu tranh.</p>
+    </main>
+
+    <script>
+        const contents = {
+            "mo-dau": `<h2>Mở đầu</h2>
+                       <p>Sau Hiệp định Genève năm 1954, Việt Nam bị chia cắt thành hai miền. Miền Bắc được giải phóng, tiến hành xây dựng chủ nghĩa xã hội, 
+                       còn miền Nam nằm dưới sự kiểm soát của chính quyền Ngô Đình Diệm do Mỹ hậu thuẫn. Mỹ can thiệp sâu vào miền Nam, ngăn cản tổng tuyển cử 
+                       thống nhất đất nước, đàn áp phong trào cách mạng, khiến nhân dân miền Nam phải đứng lên đấu tranh.</p>`,
+
+            "dien-bien": `<h2>Diễn biến chính</h2>
+                          <h3>Giai đoạn 1954 – 1960</h3>
+                          <p>Nhân dân miền Nam đấu tranh chính trị chống chế độ độc tài Ngô Đình Diệm. Năm 1960, Mặt trận Dân tộc Giải phóng miền Nam Việt Nam 
+                          ra đời, đánh dấu bước phát triển của cuộc kháng chiến.</p>
+
+                          <h3>Giai đoạn 1961 – 1965</h3>
+                          <p>Mỹ thực hiện "Chiến tranh đặc biệt", sử dụng quân đội Sài Gòn làm nòng cốt, nhưng bị quân dân miền Nam đánh bại với các chiến thắng 
+                          Ấp Bắc (1963), Bình Giã (1964), An Lão, Ba Gia...</p>
+
+                          <h3>Giai đoạn 1965 – 1968</h3>
+                          <p>Mỹ leo thang "Chiến tranh cục bộ", đưa hơn 500.000 quân viễn chinh vào miền Nam, đồng thời tiến hành chiến tranh phá hoại miền Bắc. 
+                          Quân dân ta đã đánh bại Mỹ trong chiến dịch phản công mùa khô (1965 – 1966), đặc biệt là cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968.</p>
+
+                          <h3>Giai đoạn 1969 – 1973</h3>
+                          <p>Mỹ chuyển sang "Việt Nam hóa chiến tranh", rút dần quân viễn chinh, nhưng vẫn viện trợ lớn cho chính quyền Sài Gòn. Cuộc kháng chiến tiếp 
+                          tục với đỉnh cao là chiến thắng Đường 9 - Nam Lào (1971), "Điện Biên Phủ trên không" (1972). Hiệp định Paris 1973 được ký kết, Mỹ cam kết rút 
+                          quân khỏi Việt Nam.</p>
+
+                          <h3>Giai đoạn 1973 – 1975</h3>
+                          <p>Quân dân ta đẩy mạnh chiến tranh giải phóng miền Nam, với đỉnh cao là chiến dịch Hồ Chí Minh lịch sử (30/4/1975), giải phóng hoàn toàn 
+                          miền Nam, thống nhất đất nước.</p>`,
+
+            "nguyen-nhan": `<h2>Nguyên nhân</h2>
+                            <h3>Nguyên nhân trực tiếp</h3>
+                            <p>Mỹ và chính quyền Sài Gòn phá hoại Hiệp định Genève, đàn áp nhân dân miền Nam, gây ra chiến tranh.</p>
+
+                            <h3>Nguyên nhân sâu xa</h3>
+                            <ul>
+                                <li>Nhân dân Việt Nam có truyền thống yêu nước, quyết tâm thống nhất đất nước.</li>
+                                <li>Cuộc đấu tranh giữa cách mạng (do Đảng Lao động Việt Nam lãnh đạo) và phản cách mạng (do Mỹ và chính quyền Sài Gòn kiểm soát).</li>
+                                <li>Mỹ muốn biến miền Nam Việt Nam thành căn cứ chống cộng, ngăn chặn phong trào giải phóng dân tộc ở Đông Nam Á.</li>
+                            </ul>`,
+
+            "ket-qua": `<h2>Kết quả</h2>
+                        <ul>
+                            <li>Việt Nam hoàn toàn thống nhất, chấm dứt ách thống trị của đế quốc Mỹ và chính quyền Sài Gòn.</li>
+                            <li>Mỹ chịu thất bại nặng nề, buộc phải rút khỏi Việt Nam.</li>
+                        </ul>`,
+
+            "y-nghia": `<h2>Ý nghĩa</h2>
+                        <ul>
+                            <li>Chấm dứt hơn 100 năm đô hộ của thực dân, đế quốc, đưa đất nước bước vào kỷ nguyên mới: độc lập, thống nhất, đi lên chủ nghĩa xã hội.</li>
+                            <li>Cổ vũ phong trào giải phóng dân tộc trên thế giới, làm suy yếu hệ thống thực dân kiểu mới của Mỹ.</li>
+                        </ul>
+
+                        <p>Cuộc kháng chiến chống Mỹ là một trong những cuộc chiến tranh cách mạng vĩ đại nhất của dân tộc Việt Nam, thể hiện tinh thần yêu nước, 
+                        ý chí kiên cường và sự lãnh đạo tài tình của Đảng Cộng sản Việt Nam.</p>`
+        };
+
+        function showContent(section) {
+            document.getElementById('content').innerHTML = contents[section];
+        }
+    </script>
+</body>
+</html>
