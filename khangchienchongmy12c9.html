@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuộc Kháng Chiến Chống Mỹ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4e1c6; /* Màu giấy cổ điển */
+            color: #5a3e1b;
+        }
+        header {
+            background: #8b0000;
+            color: white;
+            padding: 15px;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background: #5a3e1b;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background: #9b6a4b;
+        }
+        .main-image {
+            width: 80%;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .main-image:hover {
+            transform: scale(1.07);
+        }
+        main {
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Cuộc Kháng Chiến Chống Mỹ
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showContent('mo-dau')">Mở đầu</a></li>
+            <li><a href="#" onclick="showContent('dien-bien')">Diễn biến</a></li>
+            <li><a href="#" onclick="showContent('nguyen-nhan')">Nguyên nhân</a></li>
+            <li><a href="#" onclick="showContent('ket-qua')">Kết quả</a></li>
+            <li><a href="#" onclick="showContent('y-nghia')">Ý nghĩa</a></li>
+        </ul>
+    </nav>
+    <main id="content" class="fade-in">
+        <img src="https://cdnphoto.dantri.com.vn/thTGTyXZd1-MdofO6cFZTL3jnvE=/zoom/1200_630/a3HWDOlTcvMNT73KRccc/Image/2013/04/1-cfe2c.jpg" alt="Hình ảnh cuộc kháng chiến" class="main-image">
+        <p>Cuộc kháng chiến chống Mỹ cứu nước (1954 - 1975) là một trong những trang sử hào hùng nhất của dân tộc Việt Nam...</p>
+    </main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            document.getElementById("content").classList.add("fade-in");
+        }, 200);
+
+        function showContent(section) {
+            const content = document.getElementById("content");
+            content.classList.remove("fade-in");
+
+            setTimeout(() => {
+                content.innerHTML = contents[section];
+                content.classList.add("fade-in");
+                addImageHoverEffect();
+            }, 300);
+        }
+
+        function addImageHoverEffect() {
+            document.querySelectorAll(".main-image").forEach(img => {
+                img.addEventListener("mouseover", function () {
+                    this.style.transform = "scale(1.07)";
+                });
+                img.addEventListener("mouseout", function () {
+                    this.style.transform = "scale(1)";
+                });
+            });
+        }
+
+        window.showContent = showContent;
+        addImageHoverEffect();
+    });
+
+    const contents = {
+        "mo-dau": `<h1>Mở đầu</h1><p>Sau Hiệp định Genève năm 1954...</p>`,
+        "dien-bien": `<h1>Diễn biến</h1><p>Giai đoạn 1954 – 1960...</p>`,
+        "nguyen-nhan": `<h2>Nguyên nhân</h2><p>Mỹ và chính quyền Sài Gòn...</p>`,
+        "ket-qua": `<h2>Kết quả</h2><p>Việt Nam hoàn toàn thống nhất...</p>`,
+        "y-nghia": `<h1>Ý nghĩa</h1><p>Chấm dứt hơn 100 năm đô hộ...</p>`
+    };
+</script>
+</body>
+</html>
